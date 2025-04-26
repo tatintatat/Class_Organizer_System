@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institution Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- login -->
+<div class="login-page" id="loginPage">
+    <div class="login-form">
+        <input type="text" id="account" placeholder="Enter account">
+        <input type="password" id="password" placeholder="Enter password">
+        <button onclick="login()">Log In</button>
+        <div class="or">or Sign-in</div>
+        <button class="google-login" onclick="loginWithGoogle()">
+            <img src="google-logo-icon-gsuite-hd-701751694791470gzbayltphh-removebg-preview.png" alt="Google Logo" width="24"> Google
+        </button>
+        <p class="note">(Must be an Institutional account)</p>
+    </div>
+</div>
+<!-- choice -->
+<div class="choice-page" id="choicePage" style="display:none;">
+    <div class="choice-form">
+        <h2>Choose<br>Are you a...</h2>
+        <div class="choices">
+            <button onclick="chooseRole('Student')">
+                <img src="student.png" width="40"><br>Student
+            </button>
+            <button onclick="chooseRole('Teacher')">
+                <img src="teacher.png" width="40"><br>Teacher
+            </button>
+        </div>
+    </div>
+</div>
+<!-- dashboard -->
+<div class="dashboard-page" id = "dashboardPage" style="display: none;">
+    <p>solid</p>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

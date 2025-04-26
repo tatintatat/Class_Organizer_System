@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #b2d8f7, #d6a5d6);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* login */
+.login-form, .choice-form {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.login-form input {
+    display: block;
+    width: 90%;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    background: #6200ea;
+    color: white;
+    cursor: pointer;
+}
+.google-login {
+    background: white;
+    color: #333;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.or {
+    margin: 15px 0;
+    font-size: 14px;
+    color: #555;
+}
+.note {
+    font-size: 12px;
+    margin-top: 10px;
+    color: #666;
+}
+
+/* choice */
+.choice-form h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.choices button {
+    background: #9753a3;
+    padding: 15px;
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* para sa mobile view */
+@media (max-width: 400px) {
+    .login-form, .choice-form {
+        padding: 15px;
+        width: 95%;
+    }
+
+    .choices {
+        flex-direction: column;
+    }
+
+    .choices button {
+        width: 100%;
+    }
+}
