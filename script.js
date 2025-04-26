@@ -25,7 +25,9 @@ function showChoicePage() {
 }
 
 function chooseRole(role) {
-    alert("You selected: " + role);
-    document.getElementById('choicePage').style.display = 'none';
-    document.getElementById('dashboardPage').style.display = 'block';
+    if (role === 'Student')
+    {
+        document.getElementById('choicePage').style.display = 'none';
+        document.getElementById('dashboardPage').style.display = 'block';
+    }
 }
