@@ -28,6 +28,11 @@ function chooseRole(role) {
     if (role === 'Student')
     {
         document.getElementById('choicePage').style.display = 'none';
-        document.getElementById('dashboardPage').style.display = 'block';
+        document.getElementById('STdashboardPage').style.display = 'block';
+    }
+    else if (role === 'Teacher')
+    {
+        document.getElementById('choicePage').style.display = 'none';
+        alert("wala pang gawa!");
     }
 }
