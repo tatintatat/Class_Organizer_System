@@ -1,4 +1,5 @@
 body {
+    padding: 0;
     margin: 0;
     font-family: 'Arial', sans-serif;
     background: linear-gradient(to bottom, #b2d8f7, #d6a5d6);
@@ -69,7 +70,7 @@ button {
     flex-wrap: wrap;
 }
 .choices button {
-    background: #9753a3;
+    background: #be73cc;
     padding: 15px;
     width: 120px;
     height: 120px;
@@ -83,30 +84,67 @@ button {
 /* Student dashboard */
 .dashboard {
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    height: 100vh;
+    border-radius: 12px;
+    margin: 0;
   }
   .top-bar {
+    width: 100%; 
+    height: 7vh;
+    background: white;
     display: flex;
     align-items: center;
-    padding: 10px;
-    width: 120vh;
-    height: 4.5vh;
-    background: white;
+    padding: 0 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; 
   }
+  .low-bar{
+    width: 100%; 
+    height: 7vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000; 
+  }
+  .Classroom{
   
+  }
+.profile img{
+    margin-left: 5px;
+    background-color: rgb(254, 244, 251);
+    border-radius: 25%;
+    margin-top: 50px;
+    width: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    
+}
+.Classroom1-card{
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-
-
-
-
-
-
-
-
-
-
+    /* Center it */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
 
 
@@ -114,8 +152,8 @@ button {
 
 
 /* para sa mobile view */
-@media (max-width: 45px) {
-    .login-form, .choice-form {
+@media (max-width: 450px) {
+    .login-form, .choice-form{
         padding: 15px;
         width: 95%;
     }
@@ -125,6 +163,9 @@ button {
     }
     .choices button {
         width: 90%;
+    }
+    .STdashboard-page{
+        
     }
     
 }

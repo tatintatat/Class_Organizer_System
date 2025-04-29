@@ -28,11 +28,18 @@ function chooseRole(role) {
     if (role === 'Student')
     {
         document.getElementById('choicePage').style.display = 'none';
-        document.getElementById('STdashboardPage').style.display = 'block';
+        document.getElementById('STdashboardPage').style.display = 'flex';
+        document.getElementById('STdashboardPage').style.flexDirection = 'column';
+        document.getElementById('STdashboardPage').style.alignItems = 'center';
+        document.getElementById('STdashboardPage').style.justifyContent = 'center';
+        
     }
     else if (role === 'Teacher')
     {
         document.getElementById('choicePage').style.display = 'none';
         alert("wala pang gawa!");
     }
+}
+function Classroom1(){
+
 }
