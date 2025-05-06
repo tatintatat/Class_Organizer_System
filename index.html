@@ -41,14 +41,95 @@
             <div class="profile">
                 <img src="student.png" alt="">
             </div>
-            <div class="low-bar"></div>
+            <div class="low-bar">     
+                <button class="low-btn home-btn" onclick="home()">Home</button>
+                <button class="low-btn schedule-btn" onclick="schedulestudent()">Schedule</button>
+                <button class="low-btn teachers-btn" onclick="Teachers()">Teachers</button>
+                <button class="low-btn menu-btn">&#9776;</button>
+            </div>
         </header>
-        <div class="Classroom">
-            <div class="Classroom1-card">
-             <h1>ITEP101</h1>
+        <div class="homepage" id="homepage">
+          <div class="Classroom">
+          <div class="Classroom1-card"><h1>ITEP101</h1></div> 
+          </div>
+          <div class="bottom-rowclass">
+              <div class="Classroom2-card"><h1>ITEP102</h1></div>
+              <div class="Classroom3-card"><h1>ITEC103</h1></div>
+          </div>
+          <div class="bottow-class">
+            <div class="JoinClass-card"><h1>Join Class</h1></div>
+            <div class="RoomFinder-card"><h1>Room Finder</h1></div>
+          </div>
+        </div>
+        <div class = "teacherpage" id = "teacherpage">
+            <div class="container">
+                <h1>Teachers</h1>
+                <ul class="teacher-list">
+                    <li class="teacher-item">
+                        <div class="teacher-info">
+                            <div class="teacher-name">Teacher 1</div>
+                            <div class="subject">(Subject)</div>
+                        </div>
+                        <div class="status available">Available</div>
+                    </li>
+                    <li class="teacher-item">
+                        <div class="teacher-info">
+                            <div class="teacher-name">Teacher 2</div>
+                            <div class="subject">(Subject)</div>
+                        </div>
+                        <div class="status in-class">In class</div>
+                    </li>
+                    <li class="teacher-item">
+                        <div class="teacher-info">
+                            <div class="teacher-name">Teacher 3</div>
+                            <div class="subject">(Subject)</div>
+                        </div>
+                        <div class="status available">Available</div>
+                    </li>
+                    <li class="teacher-item">
+                        <div class="teacher-info">
+                            <div class="teacher-name">Teacher 4</div>
+                            <div class="subject">(Subject)</div>
+                        </div>
+                        <div class="status available">Available</div>
+                    </li>
+                    <li class="teacher-item">
+                        <div class="teacher-info">
+                            <div class="teacher-name">Teacher 5</div>
+                            <div class="subject">(Subject)</div>
+                        </div>
+                        <div class="status in-class">In class</div>
+                    </li>
+                    <li class="teacher-item">
+                        <div class="teacher-info">
+                            <div class="teacher-name">Teacher 6</div>
+                            <div class="subject">(Subject)</div>
+                        </div>
+                        <div class="status available">Available</div>
+                    </li>
+                    <li class="teacher-item">
+                        <div class="teacher-info">
+                            <div class="teacher-name">Teacher 7</div>
+                            <div class="subject">(Subject)</div>
+                        </div>
+                        <div class="status available">Available</div>
+                    </li>
+                </ul>
             </div>
         </div>
-</div>
+        <div class="schedule-studentpage" id = "schedule-studentpage">
+            <div class="schedulecard">
+                <div class="schedule-title">Schedule</div>
+                <div class="day">Monday</div>
+                <div class="day">Tuesday</div>
+                <div class="day">Wednesday</div>
+                <div class="day">Thursday</div>
+                <div class="day">Friday</div>
+                <div class="day">Saturday</div>
+                <div class="day">Sunday</div>
+            </div>
+        </div>
+    </div>
 </div>
 <script src="script.js"></script>
 </body>

@@ -8,7 +8,7 @@ body {
     align-items: center;
     justify-content: center;
 }
-/* login */
+/* login page//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .login-form, .choice-form {
     background: rgba(255, 255, 255, 0.9);
     padding: 20px;
@@ -58,7 +58,7 @@ button {
     color: #666;
 }
 
-/* choice */
+/* choice page//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .choice-form h2 {
     font-size: 22px;
     margin-bottom: 20px;
@@ -81,7 +81,7 @@ button {
     align-items: center;
     justify-content: center;
 }
-/* Student dashboard */
+/* Student dashboard  //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .dashboard {
     display: flex;
     height: 100vh;
@@ -101,6 +101,26 @@ button {
     left: 0;
     z-index: 1000; 
   }
+  .settings-btn {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    background: #f0f0f0;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings-btn:hover {
+    background: #e0e0e0;
+}
+
   .low-bar{
     width: 100%; 
     height: 7vh;
@@ -114,9 +134,22 @@ button {
     left: 0;
     z-index: 1000; 
   }
-  .Classroom{
+    
+.low-bar .low-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.low-bar .low-btn:hover {
+    background: #f0f0f0;
+}
   
-  }
 .profile img{
     margin-left: 5px;
     background-color: rgb(254, 244, 251);
@@ -129,43 +162,369 @@ button {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     
 }
-.Classroom1-card{
+.Classroom {
+    position: relative;
     width: 300px;
-    height: 200px;
+    height: 260px;
+    margin: 100px auto 0 auto; /* center horizontally */
+}
+
+/* Common card style */
+.Classroom1-card,
+.Classroom2-card,
+.Classroom3-card {
+    position: absolute;
+    width: 180px;
+    height: 120px;
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-    /* Center it */
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: auto;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    text-align: center;
+}
+
+/* Top card - centered */
+.Classroom1-card {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Bottom-left card - move toward center */
+.Classroom2-card {
+    bottom: 40vh;
+    left: 15px;
+}
+
+/* Bottom-right card - move toward center */
+.Classroom3-card {
+    bottom: 40vh;
+    right: 15px;
+}
+
+.bottom-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
   }
-
-
-
-
-
-
-/* para sa mobile view */
-@media (max-width: 450px) {
-    .login-form, .choice-form{
-        padding: 15px;
-        width: 95%;
+.bottow-class{
+    display:flex;
+    margin-top: 10vh;
+}
+.JoinClass-card{
+    
+    background-color: #fff;
+    padding:20px 38px;
+    border-radius: 5%;
+}
+.RoomFinder-card{
+    margin-left:2.5vh;
+    background-color: #fff;
+    padding:20px 38px;
+    border-radius: 5%;
+}
+/* Teacher-card */
+.container {
+            max-width: 500px; /* Mobile width */
+            margin: 0 auto;
+            padding: 16px; /* Reduced padding for mobile */
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            width:300px;
+            margin-top: 10vh;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 20px; /* Smaller heading */
+            margin-bottom: 16px; /* Reduced margin */
+        }
+        .teacher-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .teacher-item {
+            padding: 12px; /* Reduced padding */
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px; /* Smaller font size */
+        }
+        .teacher-item:last-child {
+            border-bottom: none;
+        }
+        .teacher-name {
+            font-weight: 600;
+            color: #222;
+        }
+        .status {
+            font-weight: normal;
+            font-size: 12px; /* Smaller status font */
+        }
+        .available {
+            color: green;
+        }
+        .in-class {
+            color: red;
+        }
+        .subject {
+            color: #666; /* Darker grey for subject */
+            font-size: 12px;
+        }
+/*schedule*/
+.schedulecard
+{
+    margin: 20px;
+    width: 90%;
+    max-width: 400px;
+    background-color: #eed3f8;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;  /* <--- ADD THIS LINE */
+    align-items: stretch;
+}
+.schedule-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #d88be8;
+}
+.day {
+    text-align: center;
+    font-size: 20px;
+    color: #e26de8;
+    margin: 10px 0;
+    border-bottom: 2px solid #555;
+    padding-bottom: 5px;
+}
+/* para sa iphone view //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media (max-width: 320px) {
+    .login-form, .choice-form .Classroom{
+        flex-direction: column;
     }
     .choices button {
-        background: #9753a3;
+        background: rgb(145, 95, 161);
         padding: 15px; 
     }
     .choices button {
         width: 90%;
     }
-    .STdashboard-page{
-        
-    }
     
+}
+@media (max-width: 320px) 
+{
+.Classroom1-card,
+.Classroom2-card,
+.Classroom3-card {
+    position: absolute;
+    width: 120px;
+    height: 80px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: smaller;
+}
+    /* Top card - centered */
+.Classroom1-card {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Bottom-left card - move toward center */
+.Classroom2-card {
+    bottom: 50vh;
+    left: 15px;
+}
+
+/* Bottom-right card - move toward center */
+.Classroom3-card {
+    bottom: 50vh;
+    right: 15px;
+}
+
+.teachercard
+{
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    background-color: rgb(243, 218, 255);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    left: 10px;
+    top: 60px;
+}
+.teachercard h1{
+    top: 30px;
+}
+.schedulecard
+{
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    background-color: rgb(243, 218, 255);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    left: 10px;
+    top: 60px;
+}
+}
+@media (max-width: 376px) and (min-width :321px)  
+{
+.Classroom1-card,
+.Classroom2-card,
+.Classroom3-card {
+    position: absolute;
+    width: 130px;
+    height: 90px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: smaller;
+}
+    /* Top card - centered */
+.Classroom1-card {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Bottom-left card - move toward center */
+.Classroom2-card {
+    bottom: 44vh;
+    left: 15px;
+}
+
+/* Bottom-right card - move toward center */
+.Classroom3-card {
+    bottom: 44vh;
+    right: 15px;
+}
+.teachercard
+{
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    background-color: rgb(243, 218, 255);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60px;
+    
+}
+
+.schedulecard
+{
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    background-color: rgb(243, 218, 255);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60px;
+}
+}
+@media (max-width: 425px) and (min-width :377px)  
+{
+.Classroom1-card,
+.Classroom2-card,
+.Classroom3-card {
+    position: absolute;
+    width: 140px;
+    height: 100px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: smaller;
+}
+    /* Top card - centered */
+.Classroom1-card {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Bottom-left card - move toward center */
+.Classroom2-card {
+    bottom: 45vh;
+    left: 17px;
+}
+
+/* Bottom-right card - move toward center */
+.Classroom3-card {
+    bottom: 45vh;
+    right: 17px;
+}
+.teachercard
+{
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    background-color: rgb(243, 218, 255);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60px;
+}
+.schedulecard
+{
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    background-color: rgb(243, 218, 255);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60px;
+}
+
 }

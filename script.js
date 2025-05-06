@@ -32,14 +32,30 @@ function chooseRole(role) {
         document.getElementById('STdashboardPage').style.flexDirection = 'column';
         document.getElementById('STdashboardPage').style.alignItems = 'center';
         document.getElementById('STdashboardPage').style.justifyContent = 'center';
+        document.getElementById('teacherpage').style.display =  'none';
+        document.getElementById('schedule-studentpage').style.display = "none";
         
     }
     else if (role === 'Teacher')
     {
         document.getElementById('choicePage').style.display = 'none';
-        alert("wala pang gawa!");
     }
 }
-function Classroom1(){
-
+function Teachers()
+{
+  document.getElementById('homepage').style.display = 'none';
+  document.getElementById('teacherpage').style.display =  'block';
+  document.getElementById('schedule-studentpage').style.display = "none";
+}
+function home()
+{
+    document.getElementById('teacherpage').style.display = 'none';
+    document.getElementById('homepage').style.display = 'block';
+    document.getElementById('schedule-studentpage').style.display = "none";
+}
+function schedulestudent()
+{
+    document.getElementById('schedule-studentpage').style.display = "block";
+    document.getElementById('homepage').style.display = 'none';
+    document.getElementById('teacherpage').style.display = 'none';
 }
