@@ -10,9 +10,8 @@ function login() {
         alert("Please enter both account and password.");
     }
 }
-
 function loginWithGoogle() {
-    alert("Logging in with Google...");
+    alert("Logging in with Google... solid");
     showChoicePage();
 }
 

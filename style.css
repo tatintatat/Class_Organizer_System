@@ -194,13 +194,13 @@ button {
 
 /* Bottom-left card - move toward center */
 .Classroom2-card {
-    bottom: 40vh;
+    bottom: 50vh;
     left: 15px;
 }
 
 /* Bottom-right card - move toward center */
 .Classroom3-card {
-    bottom: 40vh;
+    bottom: 50vh;
     right: 15px;
 }
 
@@ -212,7 +212,7 @@ button {
   }
 .bottow-class{
     display:flex;
-    margin-top: 10vh;
+    margin-top: 2vh;
 }
 .JoinClass-card{
     
@@ -415,13 +415,13 @@ button {
 
 /* Bottom-left card - move toward center */
 .Classroom2-card {
-    bottom: 44vh;
+    bottom: 50vh;
     left: 15px;
 }
 
 /* Bottom-right card - move toward center */
 .Classroom3-card {
-    bottom: 44vh;
+    bottom: 50vh;
     right: 15px;
 }
 .teachercard
@@ -485,13 +485,13 @@ button {
 
 /* Bottom-left card - move toward center */
 .Classroom2-card {
-    bottom: 45vh;
+    bottom: 40vh;
     left: 17px;
 }
 
 /* Bottom-right card - move toward center */
 .Classroom3-card {
-    bottom: 45vh;
+    bottom: 40vh;
     right: 17px;
 }
 .teachercard
