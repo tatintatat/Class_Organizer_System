@@ -45,9 +45,15 @@
                 <button class="low-btn home-btn" onclick="home()">Home</button>
                 <button class="low-btn schedule-btn" onclick="schedulestudent()">Schedule</button>
                 <button class="low-btn teachers-btn" onclick="Teachers()">Teachers</button>
-                <button class="low-btn menu-btn">&#9776;</button>
+                <button class="low-btn menu-btn" onclick="more()">&#9776;</button>
             </div>
         </header>
+        <div class="more" id = "more">
+            
+            <h1>Student 1 <br> Status </h1> <br><br>
+            <h2>Current year: 1st Year <br><br> Semester: 2nd Semester <br><br> Section: BSINFOTECH-1B <br><br> Currently: In Class</h2>
+            <button class="logout" onclick="logout()"><h1>LOG OUT</h1></button>
+        </div>
         <div class="homepage" id="homepage">
           <div class="Classroom">
           <div class="Classroom1-card"><h1>ITEP101</h1></div> 
@@ -130,6 +136,46 @@
             </div>
         </div>
     </div>
+</div>
+<!-- Teacher dashboard -->
+ <div class="Teacher-Page" id ="Teacher-Page" style="display: none;">
+  <div class="teacherspage">
+     <header class="top-bar">
+       <div class="profile"></div>
+     <div class="low-bar">     
+       <button class="low-btn home-btn" onclick="mainpage()">Home</button>
+       <button class="low-btn schedule2-btn" onclick="secondpage()">Schedule</button>
+       <button class="low-btn menu-btn" onclick="bars()">&#9776;</button>
+    </div></header>
+
+    <div class="Mainpage" id = "Mainpage">
+        <div class="button-mainpage">
+            <div class="manageclass-card"><h1>Manage Class</h1></div>
+            <div class="addmeeting-card"><h1>Add Meeting</h1></div>
+            <div class="find-room"><h1>Find Classroom</h1></div>
+        </div>
+    </div>
+    <div class="mores" id = "mores">
+            
+            <h1>Teacher 1 <br> Status </h1> <br><br>
+            <h2>College of Computer Studies <br><br> Semester: 2nd Semester <br><br> Instructor of: BSINFOTECH-1B <br><br> Currently: In Class</h2>
+            <button class="logouts" onclick="logout()"><h1>LOG OUT</h1></button>
+    </div>
+
+    <div class="Secondpage" id = "Secondpage">
+        <div class="schedulecardteacher">
+                <div class="schedule-titleteacher">Schedule</div>
+                <div class="day">Monday</div>
+                <div class="day">Tuesday</div>
+                <div class="day">Wednesday</div>
+                <div class="day">Thursday</div>
+                <div class="day">Friday</div>
+                <div class="day">Saturday</div>
+                <div class="day">Sunday</div>
+            </div>
+    </div>
+  </div>
+
 </div>
 <script src="script.js"></script>
 </body>

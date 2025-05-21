@@ -213,6 +213,7 @@ button {
 .bottow-class{
     display:flex;
     margin-top: 2vh;
+    gap: 20px;
 }
 .JoinClass-card{
     
@@ -221,7 +222,6 @@ button {
     border-radius: 5%;
 }
 .RoomFinder-card{
-    margin-left:2.5vh;
     background-color: #fff;
     padding:20px 38px;
     border-radius: 5%;
@@ -233,7 +233,7 @@ button {
             padding: 16px; /* Reduced padding for mobile */
             background-color: #fff;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.185);
             width:300px;
             margin-top: 10vh;
         }
@@ -305,6 +305,171 @@ button {
     border-bottom: 2px solid #555;
     padding-bottom: 5px;
 }
+
+
+
+/* For TEACHERS DASHBOARD ////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+.teacherspage{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* align to top */
+    padding-top: 60px;           /* space from top */
+    box-sizing: border-box;
+}
+.top-bar{
+    width: 100%; 
+    height: 7vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+  }
+  .settings-btn {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    background: #f0f0f0;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings-btn:hover {
+    background: #e0e0e0;
+}
+
+  .low-bar{
+    width: 100%; 
+    height: 7vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000; 
+  }
+    
+.low-bar .low-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.low-bar .low-btn:hover {
+    background: #f0f0f0;
+}
+.button-mainpage{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* vertical centering */
+    gap: 30px; /* space between cards */
+    
+}
+.manageclass-card,
+.addmeeting-card,
+.find-room{
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    background-color: white;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: smaller;
+    margin: 0;
+    transform: translateX(-50%);    
+}
+.manageclass-card{
+position: absolute;
+top: 30%;
+left: 50%;  
+}
+.addmeeting-card{
+position: absolute;
+top: 70%;
+left: 50%;
+}
+.find-room{
+position: absolute;
+top: 50%;
+left: 50%;
+}
+
+.more
+{
+    position: absolute;
+    width: 500px;
+    height: 350px;
+    background-color: white;
+    border-radius: 5%;
+    right: 100px;
+    bottom: 60px;
+    z-index: 99999;
+}
+.more h2{
+    font-size: small ;
+    margin-left: 6px;
+    font-weight: 200;
+}
+.schedulecardteacher
+{
+    margin: 20px;
+    width: 90%;
+    max-width: 400px;
+    background-color: #eed3f8;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;  /* <--- ADD THIS LINE */
+    align-items: stretch;
+}
+.schedule-titleteacher{
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #d88be8;
+}
+.day {
+    text-align: center;
+    font-size: 20px;
+    color: #e26de8;
+    margin: 10px 0;
+    border-bottom: 2px solid #555;
+    padding-bottom: 5px;
+}
+.mores h2{
+    font-size: small ;
+    margin-left: 6px;
+    font-weight: 200;
+}
+
 /* para sa iphone view //////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 @media (max-width: 320px) {
     .login-form, .choice-form .Classroom{
@@ -317,16 +482,12 @@ button {
     .choices button {
         width: 90%;
     }
-    
-}
-@media (max-width: 320px) 
-{
 .Classroom1-card,
 .Classroom2-card,
 .Classroom3-card {
     position: absolute;
-    width: 120px;
-    height: 80px;
+    width: 140px;
+    height: 90px;
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -388,6 +549,147 @@ button {
     left: 10px;
     top: 60px;
 }
+.addmeeting-card,
+.manageclass-card,
+.find-room
+{
+    position: absolute;
+    width: 180px;
+    height: 100px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+
+}
+
+.manageclass-card{
+position: absolute;
+top: 20%;
+left: 50%;  
+}
+.addmeeting-card{
+position: absolute;
+top: 60%;
+left: 50%;
+}
+.find-room{
+position: absolute;
+top: 40%;
+left: 50%;
+}
+
+.bottow-class{
+    display:flex;
+}
+.JoinClass-card{
+    
+    background-color: #fff;
+    padding:7px 13px;
+    border-radius: 5%;
+}
+.RoomFinder-card{
+    background-color: #fff;
+    padding:7px 23px;
+    border-radius: 5%;
+}
+.schedulecard
+{
+    margin: 30px;
+    width: 70%;
+    max-width: 400px;
+    background-color: #eed3f8;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;  /* <--- ADD THIS LINE */
+    align-items: stretch;
+}
+.schedulecardteacher
+{
+    margin-left: 1px;
+    width: 70%;
+    max-width: 400px;
+    background-color: #eed3f8;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;  /* <--- ADD THIS LINE */
+    align-items: stretch;
+    
+}
+
+.container {
+            max-width: 400px; /* Mobile width */
+            margin: 0 auto;
+            padding: 16px; /* Reduced padding for mobile */
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            width:250px;
+            margin-top: 10vh;
+}
+.more
+{
+    position: absolute;
+    width: 220px;
+    height: 300px;
+    background-color: white;
+    border-radius: 5%;
+    right: 20px;
+    bottom: 60px;
+    z-index: 99999;
+    border: 1px solid #222;
+}
+.more h1
+{
+    border-bottom:1px solid #222;
+}
+.more h2{
+    
+}
+.logout{
+    position: absolute;
+    background-color: white;
+    top: 220px;
+    height: 2px;
+}
+.logout h1{
+    border-top: 1px solid #222;
+    margin-bottom: 100px;
+}
+.mores {
+    position: absolute;
+    width: 90%; /* Responsive on smaller screens */
+    max-width: 220px;
+    max-height: 300px;
+    background-color: white;
+    border-radius: 10px;
+    right: 20px;
+    bottom: 60px;
+    z-index: 99999;
+    border: 1px solid #222;
+    overflow-y: auto; /* Adds scroll if content is too tall */
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Optional for better appearance */
+}
+.mores h1
+{
+    border-bottom:1px solid #222;
+}
+.logouts{
+    position: absolute;
+    background-color: white;
+    top: 220px;
+    height: 2px;
+}
+.logouts h1{
+    border-top: 1px solid #222;
+    margin-bottom: 100px;
+}
 }
 @media (max-width: 376px) and (min-width :321px)  
 {
@@ -395,8 +697,8 @@ button {
 .Classroom2-card,
 .Classroom3-card {
     position: absolute;
-    width: 130px;
-    height: 90px;
+    width: 150px;
+    height: 100px;
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -415,13 +717,13 @@ button {
 
 /* Bottom-left card - move toward center */
 .Classroom2-card {
-    bottom: 50vh;
+    bottom: 47vh;
     left: 15px;
 }
 
 /* Bottom-right card - move toward center */
 .Classroom3-card {
-    bottom: 50vh;
+    bottom: 47vh;
     right: 15px;
 }
 .teachercard
@@ -458,15 +760,60 @@ button {
     transform: translateX(-50%);
     top: 60px;
 }
+
+.manageclass-card,
+.addmeeting-card,
+.find-room{
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background-color: white;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: smaller;
+    margin: 0;
+    transform: translateX(-50%);    
 }
-@media (max-width: 425px) and (min-width :377px)  
+.manageclass-card{
+position: absolute;
+top: 20%;
+left: 50%;  
+}
+.addmeeting-card{
+position: absolute;
+top: 60%;
+left: 50%;
+}
+.find-room{
+position: absolute;
+top: 40%;
+left: 50%;
+}
+
+.schedulecard
+{
+    margin: 0px;
+    width: 65%;
+    max-width: 400px;
+    background-color: #eed3f8;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;  /* <--- ADD THIS LINE */
+    align-items: stretch;
+}
+}
+@media (max-width: 426px) and (min-width :377px)  
 {
 .Classroom1-card,
 .Classroom2-card,
 .Classroom3-card {
     position: absolute;
-    width: 140px;
-    height: 100px;
+    width: 160px;
+    height: 120px;
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -527,4 +874,78 @@ button {
     top: 60px;
 }
 
+.manageclass-card,
+.addmeeting-card,
+.find-room{
+    position: absolute;
+    width: 300px;
+    height: 110px;
+    background-color: white;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: smaller;
+    margin: 0;
+    transform: translateX(-50%);    
+}
+.manageclass-card{
+position: absolute;
+top: 20%;
+left: 50%;  
+}
+.addmeeting-card{
+position: absolute;
+top: 60%;
+left: 50%;
+}
+.find-room{
+position: absolute;
+top: 40%;
+left: 50%;
+}
+
+.schedulecard
+{
+    margin: 0px;
+    width: 80%;
+    max-width: 400px;
+    background-color: #eed3f8;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;  /* <--- ADD THIS LINE */
+    align-items: stretch;
+}
+.mores {
+    position: absolute;
+    width: 90%; /* Responsive on smaller screens */
+    max-width: 220px;
+    max-height: 300px;
+    background-color: white;
+    border-radius: 10px;
+    right: 20px;
+    bottom: 60px;
+    z-index: 99999;
+    border: 1px solid #222;
+    overflow-y: auto; /* Adds scroll if content is too tall */
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Optional for better appearance */
+}
+.more {
+    position: absolute;
+    width: 90%; /* Responsive on smaller screens */
+    max-width: 220px;
+    max-height: 300px;
+    background-color: white;
+    border-radius: 10px;
+    right: 20px;
+    bottom: 60px;
+    z-index: 99999;
+    border: 1px solid #222;
+    overflow-y: auto; /* Adds scroll if content is too tall */
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Optional for better appearance */
+}
 }
